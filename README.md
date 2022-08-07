@@ -55,3 +55,11 @@ or
 ```Shell
 npm start
 ```
+
+Access via browser:
+
+```Shell
+http://localhost:3000
+```
+
+> Hello World!
