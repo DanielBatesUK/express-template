@@ -1,6 +1,6 @@
 # express-template
 
-Simple node.js express template
+Simple node.js express server template
 
 ## Installation
 
@@ -63,3 +63,25 @@ http://localhost:3000
 ```
 
 > Hello World!
+
+## Credits
+
+### Dependencies
+
+- cookie-parser - [GitHub](https://github.com/expressjs/cookie-parser) [npm](https://www.npmjs.com/package/cookie-parser)
+- dotenv - [GitHub](https://github.com/motdotla/dotenv) [npm](https://www.npmjs.com/package/dotenv)
+- express - [GitHub](https://github.com/expressjs/express) [npm](https://www.npmjs.com/package/express)
+- pug - [GitHub](https://github.com/pugjs/pug/tree/master/packages/pug) [npm](https://www.npmjs.com/package/pug)
+
+## Author
+
+### **Daniel Bates**
+
+- Github: [@DanielBatesUK](https://github.com/DanielBatesUK)
+- Twitter: [@DanielBatesUK](https://twitter.com/DanielBatesUK)
+- LinkedIn: [@DanielBatesUK](https://linkedin.com/in/DanielBatesUK)
+
+## License
+
+- Copyright © 2022 [Daniel Bates](https://github.com/DanielBatesUK).
+- This project is [GNU v3.0](https://github.com/DanielBatesUK/express-template/blob/fb095588f22edde7a57a6af9f4cee60bd0f5aa96/LICENSE) licensed.
