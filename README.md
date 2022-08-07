@@ -14,7 +14,6 @@ Then enter the following variables:
 
 ```Shell
 PORT=3000
-SESSION_SECRET="Your-Super-Secret-Password-Goes-Here"
 ROUTE_INDEX="/"
 VIEW_INDEX="index"
 ```
