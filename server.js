@@ -60,7 +60,7 @@ app.get('/', routeIndex);
 // ################################################################################################
 
 // Listen for HTTP requests
-const port = process.env.PORT || 3100;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`HTTP server started and listening to port ${port}`);
 });
