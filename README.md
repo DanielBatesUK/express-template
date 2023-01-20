@@ -24,24 +24,6 @@ Once cloned, goto the project's root directory and install required dependencies
 npm install
 ```
 
-### Configure the .env file
-
-Create an new .env file with the following.
-
-```Shell
-cat > .env
-```
-
-Then enter the following variables:
-
-```Shell
-PORT=3000
-ROUTE_INDEX="/"
-VIEW_INDEX="index"
-```
-
- With the above press <kbd>Ctrl</kbd> + <kbd>D</kbd> to save.
-
 ## Run
 
 After you making the .env file you can then start the app with either:
