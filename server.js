@@ -20,11 +20,10 @@
 
 // Imports
 import cookieParser from 'cookie-parser';
-import dotevn from 'dotenv';
 import express from 'express';
 
 // My Imports
-import timeStamp from './lib/time_stamp.mjs';
+// none;
 
 // ################################################################################################
 
@@ -33,13 +32,9 @@ import routeIndex from './routes/get_index.mjs';
 
 // ################################################################################################
 
-// dotEnv
-dotevn.config();
-
-// ################################################################################################
-
 // Starting
-console.log(`${timeStamp()} - Server Starting`);
+console.log(`Server Starting`);
+if (process.debugPort) console.log(`Debug on port ${process.debugPort}`);
 
 // ################################################################################################
 
@@ -55,18 +50,18 @@ app.set('view engine', 'pug');
 
 // HTTP requests all
 app.all('*', (req, res, next) => {
-  console.log(`${timeStamp()} - Received HTTP ${req.method} request for '${req.path}'`);
+  console.log(`Received HTTP ${req.method} request for '${req.path}'`);
   next();
 });
 
 // HTTP request for index page
-app.get(process.env.ROUTE_INDEX, routeIndex);
+app.get('/', routeIndex);
 
 // ################################################################################################
 
 // Listen for HTTP requests
 app.listen(process.env.PORT, () => {
-  console.log(`${timeStamp()} - HTTP server started and listening to port ${process.env.PORT}`);
+  console.log(`HTTP server started and listening to port ${process.env.PORT}`);
 });
 
 // ################################################################################################
