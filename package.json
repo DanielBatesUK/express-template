@@ -4,16 +4,20 @@
   "description": "Simple node.js express template",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "^14.0.0"
+  }
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DanielBatesUK/express-template.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Bates",
+  "license": "GNU v3.0",
   "bugs": {
     "url": "https://github.com/DanielBatesUK/express-template/issues"
   },
