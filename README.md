@@ -26,7 +26,7 @@ npm install
 
 ## Run
 
-After you making the .env file you can then start the app with either:
+You can then start the app with either:
 
 ```Shell
 node server.js
@@ -51,7 +51,6 @@ http://localhost:3000
 ### Dependencies
 
 - cookie-parser - [GitHub](https://github.com/expressjs/cookie-parser) [npm](https://www.npmjs.com/package/cookie-parser)
-- dotenv - [GitHub](https://github.com/motdotla/dotenv) [npm](https://www.npmjs.com/package/dotenv)
 - express - [GitHub](https://github.com/expressjs/express) [npm](https://www.npmjs.com/package/express)
 - pug - [GitHub](https://github.com/pugjs/pug/tree/master/packages/pug) [npm](https://www.npmjs.com/package/pug)
 
