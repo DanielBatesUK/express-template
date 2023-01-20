@@ -50,7 +50,7 @@ app.set('view engine', 'pug');
 
 // HTTP requests all
 app.all('*', (req, res, next) => {
-  console.log(`Received HTTP ${req.method} request for '${req.path}'`);
+  console.log(`HTTP ${req.method} request for '${req.path}' received`);
   next();
 });
 
@@ -60,8 +60,9 @@ app.get('/', routeIndex);
 // ################################################################################################
 
 // Listen for HTTP requests
-app.listen(process.env.PORT, () => {
-  console.log(`HTTP server started and listening to port ${process.env.PORT}`);
+const port = process.env.PORT || 3100;
+app.listen(port, () => {
+  console.log(`HTTP server started and listening to port ${port}`);
 });
 
 // ################################################################################################
