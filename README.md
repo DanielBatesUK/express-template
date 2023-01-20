@@ -1,5 +1,13 @@
 # express-template
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/DanielBatesUK/express-template) ![GitHub last commit](https://img.shields.io/github/last-commit/DanielBatesUK/express-template) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/DanielBatesUK/express-template) ![GitHub repo size](https://img.shields.io/github/repo-size/DanielBatesUK/express-template) ![GitHub issues](https://img.shields.io/github/issues-raw/DanielBatesUK/express-template)
+
+![GitHub forks](https://img.shields.io/github/forks/DanielBatesUK/express-template?style=social)
+
+![Twitter Follow](https://img.shields.io/twitter/follow/DanielBatesUK?style=social)
+
+# Description
+
 Simple node.js express server template
 
 ## Installation
