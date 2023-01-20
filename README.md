@@ -8,13 +8,13 @@
 
 ## Description
 
-Simple node.js express server template
+Simple node.js express server template.
 
 ## Installation
 
 ### Create repo from template
 
-Goto <https://github.com/DanielBatesUK/express-template/generate> and create new repo from the template
+Goto <https://github.com/DanielBatesUK/express-template/generate> and create new repo from the template.
 
 ### Clone your repo
 
@@ -72,5 +72,5 @@ http://localhost:3000
 
 ## License
 
-- Copyright © 2022 [Daniel Bates](https://github.com/DanielBatesUK).
+- Copyright © 2023 [Daniel Bates](https://github.com/DanielBatesUK).
 - This project is [GNU v3.0](https://github.com/DanielBatesUK/express-template/blob/fb095588f22edde7a57a6af9f4cee60bd0f5aa96/LICENSE) licensed.
