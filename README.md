@@ -1,5 +1,13 @@
 # express-template
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/DanielBatesUK/express-template) ![GitHub last commit](https://img.shields.io/github/last-commit/DanielBatesUK/express-template) ![GitHub repo file count](https://img.shields.io/github/directory-file-count/DanielBatesUK/express-template) ![GitHub repo size](https://img.shields.io/github/repo-size/DanielBatesUK/express-template) ![GitHub issues](https://img.shields.io/github/issues-raw/DanielBatesUK/express-template)
+
+![GitHub forks](https://img.shields.io/github/forks/DanielBatesUK/express-template?style=social)
+
+![Twitter Follow](https://img.shields.io/twitter/follow/DanielBatesUK?style=social)
+
+# Description
+
 Simple node.js express server template
 
 ## Installation
@@ -24,27 +32,9 @@ Once cloned, goto the project's root directory and install required dependencies
 npm install
 ```
 
-### Configure the .env file
-
-Create an new .env file with the following.
-
-```Shell
-cat > .env
-```
-
-Then enter the following variables:
-
-```Shell
-PORT=3000
-ROUTE_INDEX="/"
-VIEW_INDEX="index"
-```
-
- With the above press <kbd>Ctrl</kbd> + <kbd>D</kbd> to save.
-
 ## Run
 
-After you making the .env file you can then start the app with either:
+You can then start the app with either:
 
 ```Shell
 node server.js
@@ -69,7 +59,6 @@ http://localhost:3000
 ### Dependencies
 
 - cookie-parser - [GitHub](https://github.com/expressjs/cookie-parser) [npm](https://www.npmjs.com/package/cookie-parser)
-- dotenv - [GitHub](https://github.com/motdotla/dotenv) [npm](https://www.npmjs.com/package/dotenv)
 - express - [GitHub](https://github.com/expressjs/express) [npm](https://www.npmjs.com/package/express)
 - pug - [GitHub](https://github.com/pugjs/pug/tree/master/packages/pug) [npm](https://www.npmjs.com/package/pug)
 
