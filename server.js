@@ -23,7 +23,7 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 
 // My Imports
-// none;
+import logTime from './lib/log_time.mjs';
 
 // ################################################################################################
 
@@ -33,8 +33,8 @@ import routeIndex from './routes/get_index.mjs';
 // ################################################################################################
 
 // Starting
-console.log(`Server Starting`);
-if (process.debugPort) console.log(`Debug on port ${process.debugPort}`);
+console.log(`${logTime()} Server Starting`);
+if (process.debugPort) console.log(`${logTime()} Debug on port ${process.debugPort}`);
 
 // ################################################################################################
 
@@ -50,7 +50,7 @@ app.set('view engine', 'pug');
 
 // HTTP requests all
 app.all('*', (req, res, next) => {
-  console.log(`HTTP ${req.method} request for '${req.path}' received`);
+  console.log(`${logTime()} Received HTTP ${req.method} request for '${req.path}'`);
   next();
 });
 
@@ -62,7 +62,7 @@ app.get('/', routeIndex);
 // Listen for HTTP requests
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-  console.log(`HTTP server started and listening to port ${port}`);
+  console.log(`${logTime()} HTTP server started and listening to port ${port}`);
 });
 
 // ################################################################################################
