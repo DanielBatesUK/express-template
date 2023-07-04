@@ -21,6 +21,7 @@
 // Imports
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import { v4 as uuidV4 } from 'uuid';
 
 // My Imports
 import logTime from './lib/log_time.js';
@@ -54,7 +55,8 @@ app.all('*', (req, res, next) => {
   const protocol = req.headers['x-forwarded-proto'] || req.protocol;
   const host = req.headers['x-forwarded-host'] || req.get('host');
   const originalUrl = `${protocol}://${host}${req.originalUrl}`;
-  console.log(`${logTime()} Received HTTP ${req.method} request for '${originalUrl}'`);
+  req.reqId = uuidV4();
+  console.log(`${logTime(req.reqId)} Received HTTP ${req.method} request for '${originalUrl}'`);
   next();
 });
 

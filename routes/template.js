@@ -21,12 +21,12 @@ const routeFilename = path.basename(fileURLToPath(import.meta.url), path.extname
 // GET Request
 router.get('/', (req, res) => {
   try {
-    console.log(`${logTime()} Processing HTTP ${req.method} request for '${req.path}' with route '${routeFilename}'...`);
+    console.log(`${logTime(req.reqId)} Processing HTTP ${req.method} request for '${req.path}' with route '${routeFilename}'...`);
     res.status(200).render(routeFilename);
     res.end();
-    console.log(`${logTime()} Completed HTTP ${req.method} request for '${req.path}' with route '${routeFilename}'`);
+    console.log(`${logTime(req.reqId)} Completed HTTP ${req.method} request for '${req.path}' with route '${routeFilename}'`);
   } catch (error) {
-    console.error(`${logTime()} Route '${routeFilename}' error...`, error.message);
+    console.error(`${logTime(req.reqId)} Route '${routeFilename}' error...`, error.message);
     res.status(500).json({ error: `route ${routeFilename} error` });
     res.end();
   }
