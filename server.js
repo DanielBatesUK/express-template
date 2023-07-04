@@ -1,6 +1,6 @@
 // ################################################################################################
 
-// Express-Template - A simple node.js express template
+// Express-Template - A simple node.js express server template
 // Copyright (C) 2023  Daniel Bates
 
 // This program is free software: you can redistribute it and/or modify
@@ -19,16 +19,16 @@
 // ################################################################################################
 
 // Imports
-import cookieParser from 'cookie-parser';
 import express from 'express';
+import cookieParser from 'cookie-parser';
 
 // My Imports
-import logTime from './lib/log_time.mjs';
+import logTime from './lib/log_time.js';
 
 // ################################################################################################
 
 // Routes
-import routeIndex from './routes/get_index.mjs';
+import routeIndex from './routes/index.js';
 
 // ################################################################################################
 
@@ -50,17 +50,20 @@ app.set('view engine', 'pug');
 
 // HTTP requests all
 app.all('*', (req, res, next) => {
-  console.log(`${logTime()} Received HTTP ${req.method} request for '${req.path}'`);
+  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+  const host = req.headers['x-forwarded-host'] || req.get('host');
+  const originalUrl = `${protocol}://${host}${req.originalUrl}`;
+  console.log(`${logTime()} Received HTTP ${req.method} request for '${originalUrl}'`);
   next();
 });
 
-// HTTP request for index page
+// HTTP routes
 app.get('/', routeIndex);
 
 // ################################################################################################
 
 // Listen for HTTP requests
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 app.listen(port, () => {
   console.log(`${logTime()} HTTP server started and listening to port ${port}`);
 });
