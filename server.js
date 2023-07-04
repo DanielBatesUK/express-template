@@ -45,6 +45,7 @@ app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(express.json());
 app.use(express.static('./public'));
 app.set('view engine', 'pug');
+if (app.get('env') === 'development') app.locals.pretty = true;
 
 // ################################################################################################
 
