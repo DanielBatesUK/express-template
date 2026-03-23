@@ -1,7 +1,13 @@
 # My ignores ######################################################################################
 
 .vscode/
-.eslintrc.json
+*eslint*
+*prettier*
+/database
+/storage
+.env.*
+*nodemon*
+.dockerignore
 
 # Default node .gitignore #########################################################################
 
